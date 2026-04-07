@@ -1,3 +1,8 @@
+---
+name: wiki-ingest
+description: Ingest sources (MAGI reports, papers, findings, project know-how) into the research wiki at ~/.research-wiki/
+---
+
 # Wiki Ingest
 
 Ingest a source into the research wiki at `~/.research-wiki/`.

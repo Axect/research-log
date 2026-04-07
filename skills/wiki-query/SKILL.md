@@ -1,3 +1,8 @@
+---
+name: wiki-query
+description: Search the research wiki and synthesize answers from relevant pages, with proposal and paper modes
+---
+
 # Wiki Query
 
 Search the research wiki and synthesize an answer from relevant pages.

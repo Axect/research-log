@@ -1,3 +1,8 @@
+---
+name: wiki-lint
+description: Health-check the research wiki — broken links, orphans, stale pages, contradictions, and index sync
+---
+
 # Wiki Lint
 
 Health-check the research wiki. Scans all pages for structural issues,
