@@ -8,8 +8,8 @@
     {
       "name": "research-wiki",
       "source": "./",
-      "description": "LLM-maintained research wiki with ingest, query, and lint skills",
-      "version": "0.1.0"
+      "description": "Research log system: Compass + State + Decision Log for multi-project researchers",
+      "version": "0.2.0"
     }
   ]
 }
