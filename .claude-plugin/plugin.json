@@ -1,12 +1,12 @@
 {
-  "name": "research-wiki",
+  "name": "research-log",
   "version": "0.2.0",
   "description": "Research log system: Compass + State + Decision Log for multi-project researchers",
   "author": {
     "name": "axect",
     "url": "https://github.com/axect"
   },
-  "repository": "https://github.com/axect/research-wiki",
+  "repository": "https://github.com/axect/research-log",
   "license": "MIT",
   "keywords": ["research", "log", "knowledge-management", "science", "experiment-tracking"]
 }

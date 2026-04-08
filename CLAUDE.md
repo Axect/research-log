@@ -2,7 +2,7 @@
 
 ## What This Plugin Does
 
-Research Wiki v2 is a Claude Code plugin that maintains per-project research logs at `~/.research-wiki/`. Each project gets one file with three sections:
+Research Log is a Claude Code plugin that maintains per-project research logs at `~/.research-wiki/`. Each project gets one file with three sections:
 
 - **Compass**: Goal tree with completion percentages — prevents direction loss
 - **State**: Session snapshot — enables 2-minute context reboot
