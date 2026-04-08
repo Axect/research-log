@@ -20,7 +20,7 @@ A central `dashboard.md` shows all projects at a glance.
 
 ## Key Principles
 
-1. **No forced connections**: Cross-project links emerge only from Decision Log "교훈" fields, always with user approval
+1. **No forced connections**: Cross-project links emerge only from Decision Log "교훈" (Lesson) fields, always with user approval
 2. **AI drafts, user decides**: AI generates content; user reviews before any write
 3. **Concurrency safe**: Per-project `flock` ensures parallel sessions don't corrupt files
 4. **Minimal overhead**: State updates automatically; Decision Log is the only manual action
