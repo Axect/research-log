@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>Compass + State + Decision Log for multi-project researchers</strong><br/>
-  <em>Know where you're going, where you left off, and why you made each decision.</em>
+  <em>Know where you're headed, where you left off, and why you made each decision.</em>
 </p>
 
 <p align="center">
@@ -91,7 +91,7 @@ Interactive — asks for project name, slug, repo path, main goal, and sub-goals
 
 ```
 /log-record                         # AI infers topic from recent work
-/log-record "CVAE collapse 분석"     # Provide topic hint
+/log-record "CVAE collapse analysis"  # Provide topic hint
 ```
 
 AI gathers context (git diffs, configs, experiment outputs), drafts a Decision Log entry with full Why analysis, and presents it for your review. Also proposes Compass percentage updates if progress was made.
@@ -119,9 +119,9 @@ Weekly review (~15 minutes):
 ### `/log-query`
 
 ```
-/log-query "OSPREY에서 MSGLAON을 왜 폐기했지?"
-/log-query "최근 한 달간 뭘 했지?"
-/log-query "inverse problem 관련 교훈들"
+/log-query "Why did we abandon MSGLAON in OSPREY?"
+/log-query "What did I work on last month?"
+/log-query "Lessons learned about inverse problems"
 ```
 
 Searches project files and archives, synthesizes answers with citations to specific Decision Log entries.
@@ -151,39 +151,39 @@ Build a neural operator emulator for PBH Hawking radiation inverse problems.
 
 ### Sub-goals
 - **G1. Forward Emulator** [100%]
-- **G2. Inverse Emulator** [40%] ← 현재 여기
+- **G2. Inverse Emulator** [40%] ← current focus
   - G2.1 Deterministic inverse [100%]
-  - G2.2 Probabilistic inverse [20%] ← 현재 여기
+  - G2.2 Probabilistic inverse [20%] ← current focus
 - **G3. Paper → JCAP** [10%]
 
 ---
 
 ## State
 - **Session**: 2026-04-05T14:30
-- **위치**: G2.2a
-- **하고 있던 것**: CVAE loss convergence 테스트
-- **블로커**: KL term posterior collapse
-- **다음 할 것**: β-annealing 시도
+- **Location**: G2.2a
+- **Working on**: CVAE loss convergence test
+- **Blocker**: KL term posterior collapse
+- **Next step**: Try β-annealing
 
 ---
 
 ## Decision Log
 
-### 2026-04-05 | CVAE posterior collapse 분석
+### 2026-04-05 | CVAE posterior collapse analysis
 
-**맥락**: G2.2a — CVAE + PIC Loss
+**Context**: G2.2a — CVAE + PIC Loss
 
-**시도**: Standard CVAE (β=1.0)
-**기대**: Smooth convergence
-**결과**: Loss 진동 after epoch 50
+**Tried**: Standard CVAE (β=1.0)
+**Expected**: Smooth convergence
+**Got**: Loss oscillation after epoch 50
 
-**Why 분석**:
-1. β=1.0에서 KL penalty가 처음부터 강함 → posterior collapse
-2. PBH spectrum의 고분산 특성으로 prior와의 KL divergence가 큼
-3. Bowman et al. (2016): β-annealing이 표준 해결책
+**Why Analysis**:
+1. KL penalty too strong from the start at β=1.0 → posterior collapse
+2. PBH spectrum has high variance → large KL divergence between posterior and prior
+3. Bowman et al. (2016): β-annealing is the standard fix
 
-**결론**: β-annealing (0.001 → 1.0 over 100 epochs) 시도
-**교훈**: 고분산 물리 데이터에서 VAE는 항상 β-annealing부터 시도할 것
+**Conclusion**: Try β-annealing (0.001 → 1.0 over 100 epochs)
+**Lesson**: For high-variance physics data, always start VAE training with β-annealing
 ```
 
 ## Key Principles
