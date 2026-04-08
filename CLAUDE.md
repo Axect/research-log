@@ -2,22 +2,32 @@
 
 ## What This Plugin Does
 
-Research Wiki is a Claude Code plugin that maintains a personal research knowledge base at `~/.research-wiki/`. It provides four skills for initializing, ingesting, querying, and linting wiki pages.
+Research Wiki v2 is a Claude Code plugin that maintains per-project research logs at `~/.research-wiki/`. Each project gets one file with three sections:
+
+- **Compass**: Goal tree with completion percentages — prevents direction loss
+- **State**: Session snapshot — enables 2-minute context reboot
+- **Decision Log**: Experiment decisions with thorough Why analysis — prevents knowledge decay
+
+A central `dashboard.md` shows all projects at a glance.
 
 ## Skills
 
-- `/wiki-init`: Initialize the wiki directory structure (safe to re-run)
-- `/wiki-ingest`: Ingest sources (MAGI reports, papers, findings, project know-how) into the wiki
-- `/wiki-query`: Search the wiki and synthesize answers from relevant pages
-- `/wiki-lint`: Health-check the wiki for broken links, orphans, stale pages, and more
+- `/log-init`: Initialize ~/.research-wiki/ and register a new project
+- `/log-record`: Write a Decision Log entry with Why analysis (AI drafts, user reviews)
+- `/log-state`: Update State section (called automatically by session-end hook)
+- `/log-review`: Weekly review — Compass alignment, cross-project patterns, dashboard regeneration
+- `/log-query`: Search research logs and answer questions
 
-## Wiki Location
+## Key Principles
 
-All wiki pages live under `~/.research-wiki/`. Never modify files outside this directory.
+1. **No forced connections**: Cross-project links emerge only from Decision Log "교훈" fields, always with user approval
+2. **AI drafts, user decides**: AI generates content; user reviews before any write
+3. **Concurrency safe**: Per-project `flock` ensures parallel sessions don't corrupt files
+4. **Minimal overhead**: State updates automatically; Decision Log is the only manual action
 
-## Page Conventions
+## File Location
 
-See `shared/conventions.md` for the full specification: directory layout, frontmatter schema, required body sections, cross-referencing rules, and index/log formats.
+All files live under `~/.research-wiki/`. See `shared/conventions.md` for format specification.
 
 ## Version Management
 
