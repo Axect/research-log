@@ -16,7 +16,7 @@ AI drafts the entry; user reviews and approves before it's committed.
 
 ## Arguments
 
-- `topic-hint` (optional): Brief description of what to record (e.g., "CVAE collapse 분석").
+- `topic-hint` (optional): Brief description of what to record (e.g., "CVAE collapse analysis").
   If omitted, AI infers the topic from recent session activity.
 
 ## Instructions
@@ -47,37 +47,37 @@ Write a draft entry following this exact format:
 ```markdown
 ### {today's date} | {descriptive title}
 
-**맥락**: {Which Compass sub-goal (G?.?) this falls under and why}
+**Context**: {Which Compass sub-goal (G?.?) this falls under and why}
 
-**시도**: {What was attempted — specific parameters, configs, approaches}
-**기대**: {What result was expected and why}
-**결과**: {What actually happened — specific metrics, observations}
+**Tried**: {What was attempted — specific parameters, configs, approaches}
+**Expected**: {What result was expected and why}
+**Got**: {What actually happened — specific metrics, observations}
 
-**Why 분석**:
+**Why analysis**:
 1. {Root cause chain: A caused B which caused C}
 2. {Why this is particularly the case in this problem/domain — what's specific about this physics/ML context}
 3. {Literature or empirical evidence supporting this interpretation — cite papers, known phenomena, or prior experiments if applicable}
 
-**결론**: {Next concrete action based on this analysis}
-**교훈**: {Generalizable principle that applies beyond this specific experiment — this is the cross-project connection point}
+**Conclusion**: {Next concrete action based on this analysis}
+**Lesson**: {Generalizable principle that applies beyond this specific experiment — this is the cross-project connection point}
 ```
 
-**Why 분석 guidelines:**
+**Why analysis guidelines:**
 - Point 1 is mandatory: trace the causal chain from action to observed result
 - Point 2 is mandatory: explain why this specific domain/problem exhibits this behavior
 - Point 3 is encouraged but optional: cite literature, known phenomena, or analogous results from other experiments
 - Each point should be 2-4 sentences, not a single phrase
-- If the cause is genuinely unknown, say so explicitly: "원인 미확정 — 추가 실험 필요"
+- If the cause is genuinely unknown, say so explicitly: "Cause undetermined — further experiments needed"
 
-**교훈 guidelines:**
+**Lesson guidelines:**
 - State as a general principle, not a project-specific fact
 - If the lesson applies to another registered project, mention it by name
-- Example: "VAE 계열에서 고분산 물리 데이터를 다룰 때, β=1.0에서 시작하지 말 것. SMEFTML의 cINN에서도 유사한 문제가 예상됨."
+- Example: "For high-variance physics data in VAE-family models, never start with β=1.0. Same issue likely in SMEFTML cINN."
 
 ### Step 4: Present Draft for Review
 
 Show the complete draft to the user. Ask:
-> "이 Decision Log 항목을 검토해주세요. 수정할 부분이 있으면 말씀해주세요."
+> "Please review this Decision Log entry. Let me know if anything needs to be changed."
 
 Wait for user to:
 - Approve as-is
@@ -92,7 +92,7 @@ After user approval:
 2. Read `~/.research-log/{slug}.md`
 3. Find the `## Decision Log` section
 4. Insert the new entry immediately after the `## Decision Log` heading (newest first)
-   - If the first line after `## Decision Log` is "(아직 항목 없음)", remove it
+   - If the first line after `## Decision Log` is "(No entries yet)", remove it
    - Add a `---` separator after the new entry
 5. Release lock
 
@@ -106,13 +106,13 @@ After writing the entry, assess whether the Compass needs updating:
    - Was a sub-goal completed? → propose marking as 100%
    - Did the entry reveal a new sub-goal? → propose adding it
    - Did the entry invalidate or change a sub-goal? → propose modification
-   - Should the `← 현재 여기` marker move? → propose moving it
+   - Should the `← current focus` marker move? → propose moving it
 
 3. If any changes are needed, present them:
-   > "Compass 업데이트 제안:
-   > - G2.2a CVAE + PIC Loss: 20% → 50% (loss 진동 문제 진단 완료)
-   > - `← 현재 여기` 유지: G2.2a
+   > "Compass update proposal:
+   > - G2.2a CVAE + PIC Loss: 20% → 50% (loss oscillation diagnosed)
+   > - `← current focus` stays at G2.2a
    >
-   > 적용할까요?"
+   > Apply these changes?"
 
 4. Apply only after user approval. Use `flock` for the write.

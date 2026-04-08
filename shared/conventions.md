@@ -29,18 +29,18 @@
 ## Active Projects
 
 ### {PROJECT NAME} — {one-line description}
-- **현재 단계**: {current sub-goal ID and name}
-- **상태**: {🟢 진행 중 | 🟡 blocked | 🔴 stalled} — {one-line detail}
-- **다음 마일스톤**: {next milestone}
-- **마지막 세션**: {YYYY-MM-DD}
+- **Current stage**: {current sub-goal ID and name}
+- **Status**: {🟢 active | 🟡 blocked | 🔴 stalled} — {one-line detail}
+- **Next milestone**: {next milestone}
+- **Last session**: {YYYY-MM-DD}
 
-## Timeline (최근 2주)
-| 날짜 | 프로젝트 | 결정/이벤트 |
+## Timeline (last 2 weeks)
+| Date | Project | Decision/Event |
 |------|---------|------------|
 | MM-DD | {project} | {one-line summary} |
 
 ## Cross-Project Observations
-> 자연 발생한 연결만 기록. /log-review에서 AI가 제안, 사용자 승인 후 추가.
+> Only naturally emerging connections. AI proposes during /log-review; added after user approval.
 ```
 
 Dashboard is **derived data**: regenerated from project files by `/log-review`.
@@ -64,7 +64,7 @@ Three sections: Compass, State, Decision Log.
   - G1.1 {task} [{percentage}%] — {brief status}
   - G1.2 {task} [{percentage}%]
 
-- **G2. {title}** [{percentage}%] ← 현재 여기
+- **G2. {title}** [{percentage}%] ← current focus
   - G2.1 {task} [{percentage}%]
 
 ### Why This Approach
@@ -77,7 +77,7 @@ Three sections: Compass, State, Decision Log.
 **Percentage rules:**
 - Leaf-level: set by user (AI proposes, user approves)
 - Parent-level: weighted average of children (AI computes)
-- `← 현재 여기` marker: only one at a time, indicates current focus
+- `← current focus` marker: only one at a time, indicates current focus
 
 ### State Section
 
@@ -85,12 +85,12 @@ Three sections: Compass, State, Decision Log.
 ## State
 - **Session**: {YYYY-MM-DDTHH:MM}
 - **Last session**: {YYYY-MM-DDTHH:MM}
-- **위치**: {G?.? reference to Compass}
-- **하고 있던 것**: {what was being worked on}
-- **현재 상태**: {current status}
-- **블로커**: {blocker or "없음"}
-- **다음 할 것**: {next concrete action}
-- **Compass 연결**: {how this connects to sub-goal}
+- **Location**: {G?.? reference to Compass}
+- **Working on**: {what was being worked on}
+- **Current status**: {current status}
+- **Blocker**: {blocker or "None"}
+- **Next step**: {next concrete action}
+- **Compass link**: {how this connects to sub-goal}
 ```
 
 State is **overwritten** on each session end (not appended).
@@ -102,22 +102,22 @@ State is **overwritten** on each session end (not appended).
 
 ### YYYY-MM-DD | {title}
 
-**맥락**: {Which Compass goal this falls under}
+**Context**: {Which Compass goal this falls under}
 
-**시도**: {What was attempted}
-**기대**: {What was expected}
-**결과**: {What actually happened}
+**Tried**: {What was attempted}
+**Expected**: {What was expected}
+**Got**: {What actually happened}
 
-**Why 분석**:
+**Why analysis**:
 1. {Root cause chain}
 2. {Domain-specific explanation}
 3. {Literature/empirical evidence}
 
-**결론**: {Next action}
-**교훈**: {Generalizable principle — cross-project connection point}
+**Conclusion**: {Next action}
+**Lesson**: {Generalizable principle — cross-project connection point}
 ```
 
-Newest entries first. AI drafts Why 분석; user reviews before commit.
+Newest entries first. AI drafts Why analysis; user reviews before commit.
 
 ## Archive Rules
 

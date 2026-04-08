@@ -167,7 +167,7 @@ Build a neural operator emulator for PBH Hawking radiation inverse problems.
 - **G1. Forward Emulator** [100%]
 - **G2. Inverse Emulator** [40%]
   - G2.1 Deterministic inverse [100%]
-  - G2.2 Probabilistic inverse [20%] ← 현재 여기
+  - G2.2 Probabilistic inverse [20%] ← current focus
 - **G3. Paper → JCAP** [10%]
 
 ---
@@ -175,12 +175,12 @@ Build a neural operator emulator for PBH Hawking radiation inverse problems.
 ## State
 - **Session**: 2026-04-05T14:30
 - **Last session**: 2026-04-03T16:00
-- **위치** (location): G2.2a
-- **하고 있던 것** (working on): CVAE loss convergence test
-- **현재 상태** (status): Loss oscillating after epoch 50
-- **블로커** (blocker): KL term posterior collapse
-- **다음 할 것** (next step): Try β-annealing
-- **Compass 연결** (link): G2.2 Probabilistic inverse
+- **Location**: G2.2a
+- **Working on**: CVAE loss convergence test
+- **Current status**: Loss oscillating after epoch 50
+- **Blocker**: KL term posterior collapse
+- **Next step**: Try β-annealing
+- **Compass link**: G2.2 Probabilistic inverse
 
 ---
 
@@ -188,19 +188,19 @@ Build a neural operator emulator for PBH Hawking radiation inverse problems.
 
 ### 2026-04-05 | CVAE posterior collapse analysis
 
-**맥락** (context): G2.2a — CVAE + PIC Loss
+**Context**: G2.2a — CVAE + PIC Loss
 
-**시도** (tried): Standard CVAE (β=1.0)
-**기대** (expected): Smooth convergence
-**결과** (got): Loss oscillation after epoch 50
+**Tried**: Standard CVAE (β=1.0)
+**Expected**: Smooth convergence
+**Got**: Loss oscillation after epoch 50
 
-**Why 분석** (analysis):
+**Why analysis**:
 1. KL penalty too strong from the start at β=1.0 → posterior collapse
 2. PBH spectrum has high variance → large KL divergence between posterior and prior
 3. Bowman et al. (2016): β-annealing is the standard fix
 
-**결론** (conclusion): Try β-annealing (0.001 → 1.0 over 100 epochs)
-**교훈** (lesson): For high-variance physics data, always start VAE training with β-annealing
+**Conclusion**: Try β-annealing (0.001 → 1.0 over 100 epochs)
+**Lesson**: For high-variance physics data, always start VAE training with β-annealing
 ```
 
 ## Key Principles

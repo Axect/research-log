@@ -44,12 +44,12 @@ From the current session context, generate:
 
 - **Session**: current timestamp (YYYY-MM-DDTHH:MM)
 - **Last session**: previous Session timestamp (from Step 2)
-- **위치**: identify which Compass sub-goal the recent work relates to (read Compass section)
-- **하고 있던 것**: summarize the main task from this session
-- **현재 상태**: current status of that task (completed, in progress, blocked, etc.)
-- **블로커**: any blockers, or "없음"
-- **다음 할 것**: the most logical next step
-- **Compass 연결**: explain how the current work connects to the identified sub-goal
+- **Location**: identify which Compass sub-goal the recent work relates to (read Compass section)
+- **Working on**: summarize the main task from this session
+- **Current status**: current status of that task (completed, in progress, blocked, etc.)
+- **Blocker**: any blockers, or "None"
+- **Next step**: the most logical next step
+- **Compass link**: explain how the current work connects to the identified sub-goal
 
 Keep each field to 1-2 sentences max. This is meant to be read in 2 minutes.
 

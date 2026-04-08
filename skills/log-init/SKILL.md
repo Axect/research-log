@@ -37,12 +37,12 @@ Read `shared/conventions.md` from this plugin directory for format specification
 
 ## Active Projects
 
-## Timeline (최근 2주)
-| 날짜 | 프로젝트 | 결정/이벤트 |
+## Timeline (last 2 weeks)
+| Date | Project | Decision/Event |
 |------|---------|------------|
 
 ## Cross-Project Observations
-> 자연 발생한 연결만 기록. /log-review에서 AI가 제안, 사용자 승인 후 추가.
+> Only naturally emerging connections. AI proposes during /log-review; added after user approval.
 ```
 
 ### Step 2: Collect Project Information
@@ -86,18 +86,18 @@ Write `~/.research-log/{slug}.md`:
 ## State
 - **Session**: —
 - **Last session**: —
-- **위치**: —
-- **하고 있던 것**: —
-- **현재 상태**: 프로젝트 초기화 완료
-- **블로커**: 없음
-- **다음 할 것**: {first sub-goal from Compass}
-- **Compass 연결**: {first sub-goal ID}
+- **Location**: —
+- **Working on**: —
+- **Current status**: Project initialized
+- **Blocker**: None
+- **Next step**: {first sub-goal from Compass}
+- **Compass link**: {first sub-goal ID}
 
 ---
 
 ## Decision Log
 
-(아직 항목 없음)
+(No entries yet)
 ```
 
 ### Step 4: Create Lock File
@@ -116,10 +116,10 @@ touch ~/.research-log/.locks/{slug}.lock
 2. Add to Active Projects section:
    ```markdown
    ### {Project Name}
-   - **현재 단계**: {first sub-goal}
-   - **상태**: 🟢 진행 중 — 프로젝트 초기화
-   - **다음 마일스톤**: {first major milestone}
-   - **마지막 세션**: {today}
+   - **Current stage**: {first sub-goal}
+   - **Status**: 🟢 active — project initialized
+   - **Next milestone**: {first major milestone}
+   - **Last session**: {today}
    ```
 
 3. Update the `Last updated` date.

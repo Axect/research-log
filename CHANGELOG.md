@@ -14,15 +14,15 @@
 - `/log-record` — Record Decision Log entries with thorough Why analysis (AI drafts, user reviews)
 - `/log-review` — Weekly Compass alignment check, cross-project pattern scan, dashboard regeneration, archive management
 - `/log-query` — Search research logs and answer questions with citations
-- **Compass**: Goal tree with completion percentages and `← 현재 여기` focus marker
+- **Compass**: Goal tree with completion percentages and `← current focus` focus marker
 - **State**: 6-field session snapshot for 2-minute context reboot
-- **Decision Log**: Structured entries with Why 분석 (cause chain + domain reasoning + literature)
+- **Decision Log**: Structured entries with Why analysis (cause chain + domain reasoning + literature)
 - **Dashboard**: Central view of all projects with timeline and cross-project observations
 - **Concurrency**: Per-project `flock` for parallel session safety
 - **Archive**: Decision Log auto-archiving when files grow (>30 entries or >500 lines)
 
 ### Design Philosophy
-- No forced cross-project connections — links emerge from Decision Log "교훈" fields only
+- No forced cross-project connections — links emerge from Decision Log "Lesson" fields only
 - AI drafts, user decides — no automatic writes without approval (except State via hook)
 - One file per project — Compass + State + Decision Log in a single markdown file
 - Dashboard is derived data — regenerated from project files, never directly edited by hooks

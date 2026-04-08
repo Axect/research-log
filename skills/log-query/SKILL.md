@@ -28,7 +28,7 @@ Determine the scope and type:
 
 - **Project-specific**: mentions a project name → search that project's files
 - **Cross-project**: asks about patterns, comparisons, or "all projects" → search all files
-- **Timeline**: asks about "최근", "지난 달", time ranges → filter by date
+- **Timeline**: asks about "recent", "last month", time ranges → filter by date
 - **Why/decision**: asks why something was done → target Decision Log entries
 - **Status**: asks about current state → target State and Compass sections
 
@@ -49,18 +49,18 @@ Based on question type:
 
 | Type | Format |
 |------|--------|
-| Why/decision question | Quote relevant Decision Log entry (date, title, Why 분석) |
+| Why/decision question | Quote relevant Decision Log entry (date, title, Why analysis) |
 | Status question | Show State section + Compass progress |
 | Timeline question | Chronological table of Decision Log entries |
 | Cross-project pattern | Compare entries across projects with citations |
-| How-to/lesson question | Collect 교훈 fields from relevant entries |
+| How-to/lesson question | Collect Lesson fields from relevant entries |
 
 **Citation format**: Always reference the source as `({project}, {date})`.
-Example: "MSGLAON은 curriculum training과의 중복으로 폐기됨 (osprey, 2026-03-28)."
+Example: "MSGLAON was abandoned due to redundancy with curriculum training (osprey, 2026-03-28)."
 
 ### Step 4: Answer
 
 Present the synthesized answer to the user. Keep it concise and actionable.
 
 If the answer reveals a potential cross-project connection not yet recorded in dashboard,
-mention it: "이 패턴은 /log-review에서 Cross-Project Observation으로 기록할 수 있습니다."
+mention it: "This pattern can be recorded as a Cross-Project Observation via /log-review."
