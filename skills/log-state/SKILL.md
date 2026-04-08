@@ -24,7 +24,7 @@ Read `shared/conventions.md` from this plugin directory for format specification
 
 ### Step 1: Identify Project
 
-1. Read `~/.research-wiki/dashboard.md`
+1. Read `~/.research-log/dashboard.md`
 2. Parse the Project Registry section: each line is `- {slug}: {path}`
 3. Check if the current working directory (CWD) starts with any registered path
    - Expand `~` to the home directory before comparison
@@ -33,8 +33,8 @@ Read `shared/conventions.md` from this plugin directory for format specification
 
 ### Step 2: Read Current State
 
-1. Acquire lock: `flock ~/.research-wiki/.locks/{slug}.lock`
-2. Read `~/.research-wiki/{slug}.md`
+1. Acquire lock: `flock ~/.research-log/.locks/{slug}.lock`
+2. Read `~/.research-log/{slug}.md`
 3. Parse the current `## State` section
 4. Note the current `Session` timestamp as the new `Last session` value
 

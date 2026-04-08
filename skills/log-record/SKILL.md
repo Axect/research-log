@@ -25,10 +25,10 @@ Read `shared/conventions.md` from this plugin directory for format specification
 
 ### Step 1: Identify Project
 
-1. Read `~/.research-wiki/dashboard.md`
+1. Read `~/.research-log/dashboard.md`
 2. Parse Project Registry to match CWD to a project slug
 3. If no match: ask user which project this entry belongs to
-4. Read `~/.research-wiki/{slug}.md` — specifically the Compass section (to identify goal context)
+4. Read `~/.research-log/{slug}.md` — specifically the Compass section (to identify goal context)
 
 ### Step 2: Gather Context
 
@@ -88,8 +88,8 @@ Wait for user to:
 
 After user approval:
 
-1. Acquire lock: `flock ~/.research-wiki/.locks/{slug}.lock`
-2. Read `~/.research-wiki/{slug}.md`
+1. Acquire lock: `flock ~/.research-log/.locks/{slug}.lock`
+2. Read `~/.research-log/{slug}.md`
 3. Find the `## Decision Log` section
 4. Insert the new entry immediately after the `## Decision Log` heading (newest first)
    - If the first line after `## Decision Log` is "(아직 항목 없음)", remove it

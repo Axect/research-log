@@ -34,13 +34,13 @@ Determine the scope and type:
 
 ### Step 2: Gather Sources
 
-1. Read `~/.research-wiki/dashboard.md` to identify all projects
+1. Read `~/.research-log/dashboard.md` to identify all projects
 2. Based on scope from Step 1:
    - **Project-specific**: read `{slug}.md` + all `{slug}-decisions-*.md` archive files
    - **Cross-project**: read all project files + their archives
    - **Timeline**: read relevant project files, filter entries by date
 3. If QMD plugin is available (`mcp__plugin_qmd_qmd__query`):
-   - Run a semantic search query against the research-wiki collection
+   - Run a semantic search query against the research-log collection
    - Merge QMD results with the manually gathered sources
 
 ### Step 3: Synthesize Answer

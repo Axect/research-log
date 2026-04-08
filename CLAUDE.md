@@ -2,7 +2,7 @@
 
 ## What This Plugin Does
 
-Research Log is a Claude Code plugin that maintains per-project research logs at `~/.research-wiki/`. Each project gets one file with three sections:
+Research Log is a Claude Code plugin that maintains per-project research logs at `~/.research-log/`. Each project gets one file with three sections:
 
 - **Compass**: Goal tree with completion percentages — prevents direction loss
 - **State**: Session snapshot — enables 2-minute context reboot
@@ -12,7 +12,7 @@ A central `dashboard.md` shows all projects at a glance.
 
 ## Skills
 
-- `/log-init`: Initialize ~/.research-wiki/ and register a new project
+- `/log-init`: Initialize ~/.research-log/ and register a new project
 - `/log-record`: Write a Decision Log entry with Why analysis (AI drafts, user reviews)
 - `/log-state`: Update State section (called automatically by session-end hook)
 - `/log-review`: Weekly review — Compass alignment, cross-project patterns, dashboard regeneration
@@ -27,7 +27,7 @@ A central `dashboard.md` shows all projects at a glance.
 
 ## File Location
 
-All files live under `~/.research-wiki/`. See `shared/conventions.md` for format specification.
+All files live under `~/.research-log/`. See `shared/conventions.md` for format specification.
 
 ## Version Management
 

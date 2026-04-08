@@ -143,7 +143,7 @@ Searches project files and archives, synthesizes answers with citations to speci
 ## File Structure
 
 ```
-~/.research-wiki/
+~/.research-log/
 ├── dashboard.md              # All projects at a glance
 ├── .locks/                   # Per-project flock files
 │   ├── osprey.lock

@@ -2,12 +2,12 @@
 
 ## Location
 
-`~/.research-wiki/`
+`~/.research-log/`
 
 ## File Structure
 
 ```
-~/.research-wiki/
+~/.research-log/
 ├── dashboard.md                       # All projects at a glance (derived data)
 ├── .locks/                            # flock files for concurrency safety
 │   └── {slug}.lock                    # One lock per project
@@ -129,7 +129,7 @@ Newest entries first. AI drafts Why 분석; user reviews before commit.
 
 ## Concurrency: flock Protocol
 
-- Before ANY write to `{slug}.md`: `flock ~/.research-wiki/.locks/{slug}.lock`
+- Before ANY write to `{slug}.md`: `flock ~/.research-log/.locks/{slug}.lock`
 - Per-project locks: different projects are fully parallel
 - Same project: serialized (one writer at a time)
 - Crash safety: OS releases lock on process exit

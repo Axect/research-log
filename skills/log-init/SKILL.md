@@ -1,6 +1,6 @@
 ---
 name: log-init
-description: Initialize ~/.research-wiki/ and register a new research project with Compass, State, and Decision Log
+description: Initialize ~/.research-log/ and register a new research project with Compass, State, and Decision Log
 ---
 
 # Log Init
@@ -24,9 +24,9 @@ Read `shared/conventions.md` from this plugin directory for format specification
 
 ### Step 1: Ensure Directory Structure
 
-1. Create `~/.research-wiki/` if it doesn't exist
-2. Create `~/.research-wiki/.locks/` if it doesn't exist
-3. If `~/.research-wiki/dashboard.md` doesn't exist, create it:
+1. Create `~/.research-log/` if it doesn't exist
+2. Create `~/.research-log/.locks/` if it doesn't exist
+3. If `~/.research-log/dashboard.md` doesn't exist, create it:
 
 ```markdown
 # Research Dashboard
@@ -61,7 +61,7 @@ If the slug already exists in `dashboard.md` Project Registry, ask: "This projec
 
 ### Step 3: Generate Project File
 
-Write `~/.research-wiki/{slug}.md`:
+Write `~/.research-log/{slug}.md`:
 
 ```markdown
 # {Project Name}
@@ -103,7 +103,7 @@ Write `~/.research-wiki/{slug}.md`:
 ### Step 4: Create Lock File
 
 ```bash
-touch ~/.research-wiki/.locks/{slug}.lock
+touch ~/.research-log/.locks/{slug}.lock
 ```
 
 ### Step 5: Update Dashboard
@@ -139,8 +139,8 @@ Present extracted items to user for approval before adding.
 Project registered: {Project Name}
 
 Files:
-  ~/.research-wiki/{slug}.md (Compass + State + Decision Log)
-  ~/.research-wiki/.locks/{slug}.lock
+  ~/.research-log/{slug}.md (Compass + State + Decision Log)
+  ~/.research-log/.locks/{slug}.lock
 
 Dashboard updated with project card.
 

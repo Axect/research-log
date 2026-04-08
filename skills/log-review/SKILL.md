@@ -26,9 +26,9 @@ Read `shared/conventions.md` from this plugin directory for format specification
 
 ### Step 0: Load All Projects
 
-1. Read `~/.research-wiki/dashboard.md`
+1. Read `~/.research-log/dashboard.md`
 2. Parse Project Registry to get all registered projects
-3. For each project, read `~/.research-wiki/{slug}.md`
+3. For each project, read `~/.research-log/{slug}.md`
 
 ### Phase 1: Compass Alignment (per project)
 

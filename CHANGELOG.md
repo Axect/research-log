@@ -9,7 +9,7 @@
 - **Removed**: 7-type taxonomy, mandatory frontmatter, thesis-centric cross-referencing, wikilinks, index.md, log.md
 
 ### Added
-- `/log-init` — Initialize `~/.research-wiki/` and register projects interactively
+- `/log-init` — Initialize `~/.research-log/` and register projects interactively
 - `/log-state` — Auto-update State section on session end (hook-compatible)
 - `/log-record` — Record Decision Log entries with thorough Why analysis (AI drafts, user reviews)
 - `/log-review` — Weekly Compass alignment check, cross-project pattern scan, dashboard regeneration, archive management
