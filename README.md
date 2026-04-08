@@ -133,7 +133,7 @@ Weekly review (~15 minutes):
 ### `/log-query`
 
 ```
-/log-query "Why did we abandon MSGLAON in OSPREY?"
+/log-query "Why did we abandon approach X in ProjectA?"
 /log-query "What did I work on last month?"
 /log-query "Lessons learned about inverse problems"
 ```
@@ -146,29 +146,29 @@ Searches project files and archives, synthesizes answers with citations to speci
 ~/.research-log/
 ├── dashboard.md              # All projects at a glance
 ├── .locks/                   # Per-project flock files
-│   ├── osprey.lock
-│   └── smeftml.lock
-├── osprey.md                 # Compass + State + Decision Log
-├── osprey-decisions-2025.md  # Archived entries (when file grows)
-└── smeftml.md
+│   ├── project-a.lock
+│   └── project-b.lock
+├── project-a.md              # Compass + State + Decision Log
+├── project-a-decisions-2025.md  # Archived entries (when file grows)
+└── project-b.md
 ```
 
 ### Example Project File
 
 ```markdown
-# OSPREY — PBH Hawking Radiation Neural Operator
+# ProjectA — Example Research Project
 
 ## Compass
 
 ### Main Goal
-Build a neural operator emulator for PBH Hawking radiation inverse problems.
+Build a model for the target research problem.
 
 ### Sub-goals
-- **G1. Forward Emulator** [100%]
-- **G2. Inverse Emulator** [40%]
-  - G2.1 Deterministic inverse [100%]
-  - G2.2 Probabilistic inverse [20%] ← current focus
-- **G3. Paper → JCAP** [10%]
+- **G1. Data Pipeline** [100%]
+- **G2. Model Development** [40%]
+  - G2.1 Baseline model [100%]
+  - G2.2 Advanced model [20%] ← current focus
+- **G3. Paper Submission** [10%]
 
 ---
 
@@ -176,31 +176,31 @@ Build a neural operator emulator for PBH Hawking radiation inverse problems.
 - **Session**: 2026-04-05T14:30
 - **Last session**: 2026-04-03T16:00
 - **Location**: G2.2a
-- **Working on**: CVAE loss convergence test
+- **Working on**: Loss convergence test
 - **Current status**: Loss oscillating after epoch 50
-- **Blocker**: KL term posterior collapse
-- **Next step**: Try β-annealing
-- **Compass link**: G2.2 Probabilistic inverse
+- **Blocker**: Training instability
+- **Next step**: Try learning rate schedule
+- **Compass link**: G2.2 Advanced model
 
 ---
 
 ## Decision Log
 
-### 2026-04-05 | CVAE posterior collapse analysis
+### 2026-04-05 | Training instability analysis
 
-**Context**: G2.2a — CVAE + PIC Loss
+**Context**: G2.2a — Advanced model training
 
-**Tried**: Standard CVAE (β=1.0)
+**Tried**: Standard training (default hyperparameters)
 **Expected**: Smooth convergence
 **Got**: Loss oscillation after epoch 50
 
 **Why analysis**:
-1. KL penalty too strong from the start at β=1.0 → posterior collapse
-2. PBH spectrum has high variance → large KL divergence between posterior and prior
-3. Bowman et al. (2016): β-annealing is the standard fix
+1. Learning rate too aggressive from the start
+2. Data has high variance → unstable gradients
+3. Literature suggests warm-up schedule as standard fix
 
-**Conclusion**: Try β-annealing (0.001 → 1.0 over 100 epochs)
-**Lesson**: For high-variance physics data, always start VAE training with β-annealing
+**Conclusion**: Try learning rate warm-up schedule
+**Lesson**: For high-variance data, always start with a warm-up schedule
 ```
 
 ## Key Principles

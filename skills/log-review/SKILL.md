@@ -42,12 +42,12 @@ For each registered project:
 
 4. **Direction drift check**: If more than 40% of recent entries are outside the current focus
    (`← current focus` marker), warn the user:
-   > "⚠ OSPREY: 4 of 6 entries in the past 2 weeks are unrelated to current focus (G2.2a).
+   > "⚠ ProjectA: 4 of 6 entries in the past 2 weeks are unrelated to current focus (G2.2a).
    > Main work: 2 entries on G1, 2 unclassified.
    > Is this an intentional direction change, or are you lost in the details?"
 
 5. **Progress update**: Based on recent entries, propose sub-goal percentage updates:
-   > "Compass update proposal (OSPREY):
+   > "Compass update proposal (ProjectA):
    > - G2.2a: 50% → 70% (β-annealing succeeded)
    > - G2: 40% → 45% (auto-computed)
    > Apply these changes?"
@@ -63,8 +63,8 @@ For each registered project:
    - **Contradictory approaches**: one project doing the opposite of another in a similar situation
 3. For each pattern found, present with evidence:
    > "Cross-project pattern found:
-   > OSPREY (03-28): 'Don't add architectural complexity when training strategy already solves the problem'
-   > SMEFTML (04-07): Attempting complex cINN architecture changes — same mistake?
+   > ProjectA (03-28): 'Don't add architectural complexity when training strategy already solves the problem'
+   > ProjectB (04-07): Attempting complex architecture changes — same mistake?
    >
    > Record in Dashboard?"
 
@@ -114,9 +114,9 @@ Weekly Review Complete
 ======================
 
 Compass Alignment:
-  - OSPREY: on track (G2.2a, 70%)
-  - SMEFTML: minor drift detected (see warning above)
-  - VaTD: on track (G3.2, paper writing)
+  - ProjectA: on track (G2.2a, 70%)
+  - ProjectB: minor drift detected (see warning above)
+  - ProjectC: on track (G3.2, paper writing)
 
 Cross-Project Patterns: {N found, M approved}
 

@@ -49,9 +49,9 @@ Read `shared/conventions.md` from this plugin directory for format specification
 
 Ask the user for (one question at a time):
 
-1. **Project name**: Full display name (e.g., "OSPREY — PBH Hawking Radiation Neural Operator")
-2. **Slug**: Short identifier for filenames (e.g., "osprey"). Suggest one based on name.
-3. **Repo path**: Absolute path to the project directory (e.g., `~/Documents/Project/Research/OSPREY`)
+1. **Project name**: Full display name (e.g., "MyProject — Short Description of Research")
+2. **Slug**: Short identifier for filenames (e.g., "myproject"). Suggest one based on name.
+3. **Repo path**: Absolute path to the project directory (e.g., `~/Documents/Project/Research/MyProject`)
 4. **Main Goal**: 1-2 sentence research objective
 5. **Initial sub-goals**: Ask user to list the major milestones/goals. For each, ask for a percentage estimate.
 

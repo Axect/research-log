@@ -56,7 +56,7 @@ Based on question type:
 | How-to/lesson question | Collect Lesson fields from relevant entries |
 
 **Citation format**: Always reference the source as `({project}, {date})`.
-Example: "MSGLAON was abandoned due to redundancy with curriculum training (osprey, 2026-03-28)."
+Example: "Approach X was abandoned due to redundancy with simpler method (project-a, 2026-03-28)."
 
 ### Step 4: Answer
 

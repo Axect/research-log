@@ -9,7 +9,7 @@
       "name": "research-log",
       "source": "./",
       "description": "Research log system: Compass + State + Decision Log for multi-project researchers",
-      "version": "0.2.0"
+      "version": "0.2.1"
     }
   ]
 }

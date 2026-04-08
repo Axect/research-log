@@ -72,7 +72,7 @@ Write a draft entry following this exact format:
 **Lesson guidelines:**
 - State as a general principle, not a project-specific fact
 - If the lesson applies to another registered project, mention it by name
-- Example: "For high-variance physics data in VAE-family models, never start with β=1.0. Same issue likely in SMEFTML cINN."
+- Example: "For high-variance data in generative models, never start with default hyperparameters. Same issue likely in ProjectB."
 
 ### Step 4: Present Draft for Review
 
