@@ -1,0 +1,16 @@
+# Claude Code local settings
+.claude/
+
+# Superpowers planning docs (local dev artifacts)
+docs/superpowers/
+
+# Paperbanana generation artifacts
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
