@@ -36,10 +36,10 @@ Follow these steps exactly. Read the wiki's CLAUDE.md before proceeding.
 ### Step 1: Read Source (mode-dependent)
 
 **If mode = `magi`:**
-1. Read `{target}/report.md` — the main synthesis
-2. Read `{target}/brainstorm/synthesis.md` if it exists — cross-model ideas
-3. Read `{target}/plan/research_plan.md` if it exists — methodology context
-4. Read `{target}/plan/murder_board.md` if it exists — identified risks
+1. Read `{target}/report.md` (main synthesis)
+2. Read `{target}/brainstorm/synthesis.md` if it exists (cross-model ideas)
+3. Read `{target}/plan/research_plan.md` if it exists (methodology context)
+4. Read `{target}/plan/murder_board.md` if it exists (identified risks)
 5. Scan `{target}/results/` for key output files
 
 **If mode = `paper`:**
@@ -49,7 +49,7 @@ Follow these steps exactly. Read the wiki's CLAUDE.md before proceeding.
 
 **If mode = `finding`:**
 1. The `target` is the description itself
-2. Gather context from the current conversation — what experiment was run, what happened, why
+2. Gather context from the current conversation: what experiment was run, what happened, why
 
 **If mode = `knowhow`:**
 1. Find the project directory (check `~/Documents/Project/Research/{target}/`,
@@ -79,13 +79,13 @@ Present the plan to the user:
 Ingest plan for: {source description}
 
 Create:
-  - findings/new-finding-slug.md — "one-line description"
-  - methods/new-method.md — "one-line description"
+  - findings/new-finding-slug.md: "one-line description"
+  - methods/new-method.md: "one-line description"
 
 Update:
-  - projects/osprey.md — add to Key Findings, update Know-how
-  - thesis/recoverability.md — new evidence in Evidence For
-  - concepts/operator-learning.md — add connection to new method
+  - projects/osprey.md: add to Key Findings, update Know-how
+  - thesis/recoverability.md: new evidence in Evidence For
+  - concepts/operator-learning.md: add connection to new method
 
 Pages touched: N
 ```
@@ -121,7 +121,7 @@ Read the current `index.md`, then:
 1. Add entries for newly created pages under the correct type heading
 2. Update the count in each type heading: `## Type (N)`
 3. Ensure entries are under 150 characters
-4. Format: `- [[slug]] — one-line description [status/relevance]`
+4. Format: `- [[slug]]: one-line description [status/relevance]`
 
 ### Step 6: Update Log
 

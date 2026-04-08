@@ -1,6 +1,6 @@
 ---
 name: wiki-lint
-description: Health-check the research wiki — broken links, orphans, stale pages, contradictions, and index sync
+description: Health-check the research wiki for broken links, orphans, stale pages, contradictions, and index sync
 ---
 
 # Wiki Lint
@@ -132,8 +132,8 @@ Otherwise, present each fixable issue and ask for approval:
 | Index sync (wrong count) | Recalculate and update count |
 
 **Non-fixable issues (report only):**
-- Contradictions — require human judgment
-- Thesis gaps — require research to fill
+- Contradictions: require human judgment
+- Thesis gaps: require research to fill
 
 ### Step 5: Log
 

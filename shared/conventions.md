@@ -58,7 +58,7 @@ Every page has:
 
 - One entry per page, under 150 characters
 - Grouped by type with count: `## Projects (3)`
-- Entry format: `- [[slug]] — one-line description [status]`
+- Entry format: `- [[slug]]: one-line description [status]`
 
 ## log.md Format
 

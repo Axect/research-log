@@ -18,9 +18,9 @@ Optionally file the answer back into the wiki as a new page.
 
 - `question` (required): Natural language question about the research
 - `--for` (optional): Output mode. One of:
-  - `proposal` — presentation/proposal-ready narrative using thesis backbone
-  - `paper` — evidence-focused output suitable for paper drafts
-  - (default) — general answer
+  - `proposal`: presentation/proposal-ready narrative using thesis backbone
+  - `paper`: evidence-focused output suitable for paper drafts
+  - (default): general answer
 
 ## Instructions
 
@@ -45,7 +45,7 @@ Extract from the question:
 Merge results with index.md findings, deduplicate.
 
 If qmd is not available, rely on index.md scanning only.
-This is acceptable — qmd enhances recall but is not required.
+This is acceptable. QMD enhances recall but is not required.
 
 ### Step 3: Read Pages
 
