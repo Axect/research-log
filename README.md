@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="research-log-architecture.png" width="700" alt="Research Log architecture: per-project files (Compass + State + Decision Log) feed through 5 skills into a central dashboard" />
+</p>
+
 <h1 align="center">Research Log</h1>
 
 <p align="center">
