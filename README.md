@@ -61,17 +61,27 @@ A central **dashboard** shows all projects at a glance.
 
 ### Installation
 
-**1. Install the plugin** (inside Claude Code):
-```
-/install Axect/research-log
+**1. Add the marketplace and install** (in your terminal):
+```bash
+claude plugin marketplace add Axect/research-log
+claude plugin install research-log
 ```
 
-**2. Register your first project:**
+**2. Register your first project** (inside Claude Code):
 ```
 /log-init
 ```
 
-This creates `~/.research-wiki/`, asks for project info interactively, and generates the Compass + State + Decision Log file.
+Interactive setup — asks for project info and generates the Compass + State + Decision Log file.
+
+<details>
+<summary><strong>Alternative: Local Development</strong></summary>
+
+```bash
+git clone https://github.com/Axect/research-log.git
+claude --plugin-dir /path/to/research-log
+```
+</details>
 
 ## Skills
 
