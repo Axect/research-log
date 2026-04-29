@@ -116,3 +116,27 @@ After writing the entry, assess whether the Compass needs updating:
    > Apply these changes?"
 
 4. Apply only after user approval. Use `flock` for the write.
+
+### Step 7: Check Core Documents Update
+
+After Compass check, assess whether the `## Core Documents` section needs updating.
+
+The Core Documents section pins the project's research-frontier artifacts in `outputs/` (or comparable directory) so that future `/log-query` recommendations point at the right substrate. Only update when the recorded decision implies one of:
+
+- **New canonical artifact created**: a new `outputs/<dir>/` was produced that supersedes or extends the current frontier (e.g., a new integrated report, a new methodology document, a new operating-point validation suite). → propose adding as ★★★ Core.
+- **Existing canonical artifact superseded**: an artifact previously listed as ★★★ is now superseded by a newer one. → propose demoting to ★★ Foundational, or adding a `component → <new-path>` status if it remains a valid component.
+- **Status / role changed**: an artifact gained a deprecation header, was renamed, was split into components, or its `last YYYY-MM-DD` touch date should advance. → propose status / date update.
+- **New foundational reference identified**: an architecture / training-data / paper-substrate document the project will keep referencing. → propose adding as ★★ Foundational.
+
+If none of these apply, **skip this step silently** — most decisions don't change the Core Documents.
+
+When proposing, present a concrete diff:
+
+> "Core Documents update proposal:
+> - **Add (★★★)** `outputs/<new-dir>/` — <role> · active canonical · {today}
+> - **Demote (★★★ → ★★)** `outputs/<old-dir>/` — status: `superseded by <new-dir>` · {today}
+> - **Touch** `outputs/<existing-dir>/` last date → {today}
+>
+> Apply these changes?"
+
+Apply only after user approval. Use `flock` for the write. Cap at ≤15 entries; if the list would exceed, propose pruning a stale ★★ entry first.

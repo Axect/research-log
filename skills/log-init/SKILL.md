@@ -83,6 +83,22 @@ Write `~/.research-log/{slug}.md`:
 
 ---
 
+## Core Documents
+> Pointers to current research-frontier artifacts. Read by `/log-query`,
+> `/log-record`, `/log-review` for forward-looking recommendations. Updated
+> via skill prompts on user approval. Cap: ≤15 entries; demote stale items
+> to ★★ before removal.
+
+### ★★★ Core (current frontier)
+
+(No entries yet — added as the project produces canonical artifacts.)
+
+### ★★ Foundational (architecture / training-data / paper-substrate references)
+
+(No entries yet.)
+
+---
+
 ## State
 - **Session**: —
 - **Last session**: —

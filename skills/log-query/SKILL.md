@@ -39,7 +39,8 @@ Determine the scope and type:
    - **Project-specific**: read `{slug}.md` + all `{slug}-decisions-*.md` archive files
    - **Cross-project**: read all project files + their archives
    - **Timeline**: read relevant project files, filter entries by date
-3. If QMD plugin is available (`mcp__plugin_qmd_qmd__query`):
+3. **Read the `## Core Documents` section** if present in any project file consulted. The Core Documents pointers (★★★ Core / ★★ Foundational) tell you which `outputs/` artifacts are the current research-frontier substrate vs. historical/peripheral work. This list is **user-curated** — treat it as authoritative for "what matters now."
+4. If QMD plugin is available (`mcp__plugin_qmd_qmd__query`):
    - Run a semantic search query against the research-log collection
    - Merge QMD results with the manually gathered sources
 
@@ -57,6 +58,8 @@ Based on question type:
 
 **Citation format**: Always reference the source as `({project}, {date})`.
 Example: "Approach X was abandoned due to redundancy with simpler method (project-a, 2026-03-28)."
+
+**Forward-looking recommendations**: When the question is "what should I do next?", "이제 해야할 건?", or any planning-style question, prefer pointing at concrete `outputs/` paths from the **Core Documents** section over searching the broader output directory. Example: "Continue JCAP §4 condensation using `outputs/uq_trajectory_full/` as the substrate (osprey, 2026-04-27 ★★★ canonical)." If the answer hinges on an artifact that is **not** in Core Documents, flag it: "This depends on `outputs/<path>` which is not pinned in Core Documents — consider promoting it via `/log-record`."
 
 ### Step 4: Answer
 
