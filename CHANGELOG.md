@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0] - 2026-04-29
+
+### Added
+- **Core Documents section** (optional, between Compass and State in `{slug}.md`): user-curated pointers to current research-frontier artifacts (e.g., `outputs/<dir>/` paths produced by other workflows). Two-tier system — **★★★ Core** (active canonical) and **★★ Foundational** (architecture / training-data / paper-substrate references) — with a small status enum (`active canonical`, `component → <other>`, `preserved + header`, `foundational`, `reference §X`, `superseded`), `last YYYY-MM-DD` touch date, ` · ` field separator, and a ≤15-entry cap.
+- `shared/conventions.md`: full spec for the new section (tier semantics, status enum, format, separator, cap, maintenance rules).
+- `/log-init`: emits an empty Core Documents section in the new project file template.
+- `/log-query` Step 2: reads `## Core Documents` when present and treats it as authoritative for "what matters now". Step 3 forward-looking guidance: prefer pointing at concrete `outputs/` paths from Core Documents over searching the broader output directory; flag artifacts not yet pinned for promotion via `/log-record`.
+- `/log-record` Step 7 (new): after the Compass-update prompt, assess whether the recorded decision implies a Core Documents diff (new canonical artifact, supersession, status change, or new foundational reference) and propose the diff for user approval.
+- `/log-review` Phase 1 step 7 (new): staleness check — flag ★★★ entries with `last YYYY-MM-DD` 30+ days old and propose demotion to ★★. Phase 3 step 5 (new): preserve Core Documents during dashboard regeneration (user-curated, not derived).
+
+### Design Philosophy
+- **User-curated, not derived**: unlike the dashboard (which is regenerated from project files), the Core Documents list is maintained by the user with skill assistance. Skills propose updates; never auto-edit without approval.
+- **Forward-looking pointer layer**: complements Decision Log (history) and State (current snapshot) by pinning the *artifacts* the project's frontier currently rests on. Useful when a project produces many `outputs/*` directories and only a handful are actively cited by current paper substrate / canonical artifacts.
+
 ## [0.2.1] - 2026-04-08
 
 ### Fixed

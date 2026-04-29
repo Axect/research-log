@@ -48,7 +48,9 @@ Hooks never write to dashboard directly.
 
 ## Project File ({slug}.md) Format
 
-Three sections: Compass, State, Decision Log.
+Three required sections (Compass, State, Decision Log) and one optional section
+(Core Documents). When present, Core Documents is placed between Compass and
+State.
 
 ### Compass Section
 
@@ -78,6 +80,46 @@ Three sections: Compass, State, Decision Log.
 - Leaf-level: set by user (AI proposes, user approves)
 - Parent-level: weighted average of children (AI computes)
 - `← current focus` marker: only one at a time, indicates current focus
+
+### Core Documents Section (optional)
+
+```markdown
+## Core Documents
+> Pointers to current research-frontier artifacts. Read by `/log-query`,
+> `/log-record`, `/log-review` for forward-looking recommendations. Updated
+> via skill prompts on user approval. Cap: ≤15 entries; demote stale items
+> to ★★ before removal.
+
+### ★★★ Core (current frontier)
+
+- `<path>` — **<role>** (<artifact inventory>) · <status> · <last YYYY-MM-DD>
+- ...
+
+### ★★ Foundational (architecture / training-data / paper-substrate references)
+
+- `<path>` — <role> · <status> · <last YYYY-MM-DD>
+- ...
+```
+
+**Tier semantics:**
+- **★★★ Core** — actively cited by paper substrate or current canonical artifact
+- **★★ Foundational** — architecture / training-data / methodology references
+
+**Status enum (small, extend only if necessary):**
+- `active canonical` — current source of truth
+- `component → <other-path-stem>` — preserved with cross-reference header pointing at a different active canonical
+- `preserved + header` — predates current methodology, kept as historical artifact
+- `foundational` — used as reference, not actively maintained
+- `reference §X` — paper section it supports
+- `superseded` — kept only as predecessor evidence (rare; usually demote to ★★ instead)
+
+**Field separator** is the middle-dot ` · ` (U+00B7) so paths and roles can include hyphens / em-dashes without ambiguity. Path is wrapped in backticks for regex extraction.
+
+**Cap & maintenance:**
+- ≤ 15 entries total. When list grows: demote ★★★ → ★★ before removing.
+- ★★★ entries with no `last YYYY-MM-DD` touch in 30+ days are flagged by `/log-review` Phase 1 for demotion.
+- The section is **user-curated** (not derived). `/log-review` Phase 3 preserves it intact during dashboard regeneration.
+- Skills propose updates via prompt; never auto-edit without user approval.
 
 ### State Section
 

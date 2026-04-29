@@ -54,6 +54,17 @@ For each registered project:
 
 6. Apply only after user approval per project.
 
+7. **Core Documents staleness check** (if section exists in `{slug}.md`):
+   - Parse `## Core Documents` entries by tier (★★★ Core / ★★ Foundational)
+   - For each ★★★ entry, extract the trailing `last YYYY-MM-DD` touch date
+   - If touch date is **30+ days** older than today, propose demotion to ★★:
+     > "Core Documents staleness (ProjectA):
+     > - `outputs/<dir-a>/` (★★★, last 2026-02-15) — 73 days untouched. Demote to ★★ Foundational?
+     > - `outputs/<dir-b>/` (★★★, last 2026-03-25) — 35 days untouched. Demote to ★★?
+     > Apply these changes?"
+   - Also flag: ★★★ entries with status `superseded` (should already be ★★ or removed) and entries exceeding the ≤15 cap.
+   - Apply on user approval. Use `flock` for the write.
+
 ### Phase 2: Cross-Project Pattern Scan
 
 1. Collect all Decision Log entries from the past 2 weeks across ALL projects
@@ -89,7 +100,11 @@ Regenerate `dashboard.md` from project file data:
 
 4. **Preserve**: Keep existing Project Registry unchanged
 
-5. Write the regenerated `dashboard.md` with updated date.
+5. **Preserve**: Keep each project's `## Core Documents` section in `{slug}.md` intact
+   — it is **user-curated** (not derived from State / Decision Log). Phase 1 step 7
+   handles its updates separately.
+
+6. Write the regenerated `dashboard.md` with updated date.
 
 ### Phase 4: Archive Management
 
