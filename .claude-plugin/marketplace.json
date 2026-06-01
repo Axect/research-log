@@ -8,8 +8,8 @@
     {
       "name": "research-log",
       "source": "./",
-      "description": "Research log system: Compass + State + Decision Log for multi-project researchers",
-      "version": "0.2.1"
+      "description": "Research log that acts as an advisor: Compass + State + Journal + Core Documents, first-class Lessons promoted to decision-time Rules, and cross-project semantic recall",
+      "version": "0.4.0"
     }
   ]
 }
