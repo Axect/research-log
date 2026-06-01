@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.4.0] - 2026-06-01
+
+### Breaking Changes
+- **Storage moved**: `~/.research-log/` → `~/.research/`. Per-project files are split into `projects/{slug}/compass.md`, `state.md`, and `journal.md` (verbatim Decision Log) instead of a single `{slug}.md`.
+- **Consolidated skills**: the five `/log-*` skills are replaced by a single `research-log` skill with workflow references (initialize, record, save-state, recall, check, review).
+
+### Added
+- **Advisor model (M1/M3/M4)** — the log now actively improves research instead of only recording it:
+  - **M1 decision guardrail**: before agreeing to an architecture/method/approach choice, the skill consults `rules.md` and surfaces matching anti-patterns ("you are about to X; this bit you in Y, Z").
+  - **M3 cross-project recall**: semantic search (QMD) over journals + lessons to answer "have I solved this before?".
+  - **M4 real-time drift**: flags work that has drifted from the current Compass `← current focus`.
+- **First-class Lessons** (`lessons/{id}.md`): generalizable principles extracted from journal entries, with `trigger`/`kind`/`projects`/`status` frontmatter.
+- **Rules** (`rules.md`): lessons that recur across ≥ 2 projects are promoted to an always-loaded decision checklist.
+- **QMD search backbone**: recall and lesson dedup use QMD over `~/.research/`; review runs `qmd update && qmd embed`.
+
+### Changed
+- **Core Documents** (from 0.3.0) is retained and folded into the new layout: it now lives in `compass.md` (after Biggest Risk) and is read by recall, maintained by record (propose-on-approval), and staleness-checked by review.
+
+### Migration
+- Existing `~/.research-log/{slug}.md` files split into the new per-project layout; Decision Log preserved verbatim as `journal.md`; the `## Core Documents` section carried into `compass.md`. Lessons extracted into `lessons/`. Keep `~/.research-log/` as a backup until verified.
+
 ## [0.3.0] - 2026-04-29
 
 ### Added
